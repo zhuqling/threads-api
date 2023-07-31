@@ -344,8 +344,8 @@ export class ThreadsAPI {
     this.httpAgent = options.httpAgent;
     this.httpsAgent = options.httpsAgent;
 
-    this.username = options.username ?? (process ? process.env.THREADS_USERNAME : null);
-    this.password = options.password ?? (process ? process.env.THREADS_PASSWORD : null);
+    this.username = options.username ?? (process ? process.env.THREADS_USERNAME : '');
+    this.password = options.password ?? (process ? process.env.THREADS_PASSWORD : '');
     this.deviceID = options.deviceID ?? (process ? process.env.THREADS_DEVICE_ID : generateDeviceID());
     this.device = options.device ?? DEFAULT_DEVICE;
     this.userID = options.userID;
